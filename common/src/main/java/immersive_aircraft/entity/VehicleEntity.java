@@ -263,7 +263,7 @@ public abstract class VehicleEntity extends Entity {
     }
 
     private void applyDamage(float amount, boolean force) {
-        if (isRemoved()) {
+        if (isRemoved() || getHealth() <= 0) {
             return;
         }
 
